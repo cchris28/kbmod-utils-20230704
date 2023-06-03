@@ -1,0 +1,16 @@
+# Changes here will be overwritten by Copier
+_commit: v1.3.4-9-g8bcd0d9
+_src_path: /Users/cchris28/projects/python-project-template
+author_email: cchris28@uw.edu
+author_name: Carl Christofferson
+create_example_module: true
+custom_install: true
+include_notebooks: true
+mypy_type_checking: basic
+namespace_project: kbmod
+package_name: utils
+preferred_linter: black
+project_license: MIT
+project_name: kbmod-utils
+use_gitlfs: none
+use_isort: true
