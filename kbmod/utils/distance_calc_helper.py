@@ -12,6 +12,7 @@ from astropy.coordinates import (
 )
 from astropy.time import Time
 
+
 class DistCalcHelper:
     """Helper class to hold the values needed to calculate the distance to an object.
 
@@ -39,7 +40,9 @@ class DistCalcHelper:
         and has no distance or time information.
     """
 
-    def __init__(self, ra = 90 * u.degree, dec = 23.43952556 * u.degree, obstime = "2023-03-20T16:00:00", distance = 10 * u.au) -> None:
+    def __init__(
+        self, ra=90 * u.degree, dec=23.43952556 * u.degree, obstime="2023-03-20T16:00:00", distance=10 * u.au
+    ) -> None:
         self.distance = distance
         self.obstime = Time(obstime, format="isot", scale="utc")
         self.helio = ICRS(ra, dec, distance=self.distance)
@@ -52,9 +55,7 @@ class DistCalcHelper:
         with solar_system_ephemeris.set("de432s"):
             self.obs_pos_itrs = EarthLocation.of_site("ctio").get_itrs(obstime=self.obstime)
             self.observer_to_object = ICRS(
-                self.helio.transform_to(self.obs_pos_itrs)
-                .transform_to(GCRS(obstime=self.obstime))
-                .cartesian
+                self.helio.transform_to(self.obs_pos_itrs).transform_to(GCRS(obstime=self.obstime)).cartesian
             )
             self.cobs = ICRS(ra=self.observer_to_object.ra, dec=self.observer_to_object.dec)
             self.obs_pos = ICRS(self.helio.cartesian - self.observer_to_object.cartesian)
