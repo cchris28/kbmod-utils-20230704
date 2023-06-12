@@ -1,4 +1,5 @@
 import typing
+
 import astropy.coordinates
 import astropy.units
 import astropy.wcs
