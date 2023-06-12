@@ -1,3 +1,4 @@
+import typing
 import astropy.coordinates
 import astropy.units
 import astropy.wcs
@@ -5,7 +6,7 @@ import astropy.wcs
 
 def construct_wcs_tangent_projection(
     ref_val: astropy.coordinates.SkyCoord,
-    img_shape: list[int] = [4096, 4096],
+    img_shape: typing.List[int] = [4096, 4096],
     ref_pix=None,
     pixel_scale: astropy.units.Quantity = None,
     image_fov: astropy.units.Quantity = None,
