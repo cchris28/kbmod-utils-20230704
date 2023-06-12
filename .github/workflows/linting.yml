@@ -33,4 +33,4 @@ jobs:
 
       uses: psf/black@stable
       with:
-        kbmod: ./kbmod
+        src: ./kbmod
