@@ -60,6 +60,6 @@ profile = "black"
 utils = ["py.typed"]
 
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["src/kbmod"]
+where = ["src"]
+include = ["kbmod"]
 namespaces = true
