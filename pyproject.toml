@@ -48,7 +48,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools_scm]
-write_to = "kbmod/utils/_version.py"
+write_to = "src/kbmod/utils/_version.py"
 
 [tool.black]
 line-length = 110
@@ -61,5 +61,5 @@ utils = ["py.typed"]
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["kbmod"]
+include = ["src/kbmod"]
 namespaces = true

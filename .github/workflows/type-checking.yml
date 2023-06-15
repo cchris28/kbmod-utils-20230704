@@ -32,4 +32,4 @@ jobs:
     - name: Analyze code with mypy
 
       run: |
-        mypy ./kbmod ./tests --ignore-missing-imports
+        mypy ./src/kbmod ./tests --ignore-missing-imports
